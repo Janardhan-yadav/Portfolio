@@ -8,20 +8,23 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-sky relative overflow-hidden">
-      {/* Background decoration */}
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden z-10">
+      {/* Magical Background Decorations */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-32 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl magical-hover"></div>
+        <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-accent/20 rounded-full blur-3xl doraemon-float"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-red-accent/10 rounded-full blur-2xl magical-hover" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center">
-          {/* Animated Emoji Hero */}
-          <div className="mb-8 flex justify-center">
-            <div className="text-8xl md:text-9xl lg:text-[10rem] doraemon-float">
+          {/* Magical Flying Doraemon */}
+          <div className="mb-8 flex justify-center relative">
+            <div className="text-8xl md:text-9xl lg:text-[12rem] magical-hover relative z-10">
               🚁
             </div>
+            {/* Magical glow effect */}
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
           </div>
 
           {/* Hero Text */}
@@ -37,48 +40,48 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          {/* Magical CTA Buttons */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-gradient-doraemon hover:scale-105 transition-transform duration-300 shadow-doraemon text-lg px-8 py-6 rounded-2xl font-rounded font-semibold"
+              className="magic-button text-lg px-10 py-8 rounded-3xl font-rounded font-bold shadow-doraemon border-4 border-primary/30 text-primary-foreground"
               onClick={() => scrollToSection("projects")}
             >
-              View My Projects
+              ✨ Explore My Gadgets ✨
             </Button>
             <Button 
               variant="outline" 
               size="lg"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-lg px-8 py-6 rounded-2xl font-rounded font-semibold"
+              className="border-4 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 text-lg px-10 py-8 rounded-3xl font-rounded font-bold backdrop-blur-sm bg-white/20"
               onClick={() => scrollToSection("contact")}
             >
-              Let's Connect
+              🔗 Connect Through Time
             </Button>
           </div>
 
-          {/* Social Links */}
-          <div className="mt-12 flex justify-center space-x-6">
+          {/* Magical Social Gadgets */}
+          <div className="mt-12 flex justify-center space-x-8">
             <a 
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-gadget hover:shadow-doraemon"
+              className="p-4 rounded-full bg-white/20 backdrop-blur-md border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-500 shadow-gadget hover:shadow-doraemon hover:scale-125 hover:rotate-12"
             >
-              <Github size={24} />
+              <Github size={28} />
             </a>
             <a 
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-gadget hover:shadow-doraemon"
+              className="p-4 rounded-full bg-white/20 backdrop-blur-md border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-500 shadow-gadget hover:shadow-doraemon hover:scale-125 hover:rotate-12"
             >
-              <Linkedin size={24} />
+              <Linkedin size={28} />
             </a>
             <a 
               href="mailto:janardhan@example.com"
-              className="p-3 rounded-full bg-card hover:bg-primary hover:text-primary-foreground transition-all duration-300 shadow-gadget hover:shadow-doraemon"
+              className="p-4 rounded-full bg-white/20 backdrop-blur-md border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-500 shadow-gadget hover:shadow-doraemon hover:scale-125 hover:rotate-12"
             >
-              <Mail size={24} />
+              <Mail size={28} />
             </a>
           </div>
 

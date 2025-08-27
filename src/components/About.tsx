@@ -27,52 +27,62 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-background relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-accent/10 rounded-full blur-2xl"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary/10 rounded-full blur-2xl"></div>
+    <section id="about" className="py-20 relative overflow-hidden z-10">
+      {/* Magical Background Decorations */}
+      <div className="absolute top-20 left-10 w-48 h-48 bg-accent/20 rounded-full blur-3xl magical-hover"></div>
+      <div className="absolute bottom-20 right-10 w-56 h-56 bg-primary/20 rounded-full blur-3xl doraemon-float"></div>
+      <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-red-accent/15 rounded-full blur-2xl magical-hover" style={{ animationDelay: '3s' }}></div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-doraemon font-bold text-foreground mb-4">
-            About Me
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-doraemon font-bold text-foreground mb-6 relative">
+            ✨ About Me ✨
+            <div className="absolute -top-4 -right-8 text-3xl animate-bounce">🎈</div>
           </h2>
-          <p className="text-xl text-muted-foreground font-rounded">
-            Stored in Doraemon's magical pocket
+          <p className="text-2xl text-muted-foreground font-rounded">
+            🎒 Stored in Doraemon's magical pocket of wonders 🎒
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Doraemon's Pocket */}
+          {/* Magical Doraemon's Pocket */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div 
-                className="pocket-container w-80 h-80 cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center text-9xl"
+                className="pocket-magic w-96 h-96 cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-3 flex items-center justify-center text-[8rem] shadow-doraemon"
                 onClick={handlePocketClick}
               >
                 🎒
                 
+                {/* Magical sparkles */}
+                <div className="absolute top-8 right-8 text-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>✨</div>
+                <div className="absolute bottom-8 left-8 text-2xl animate-bounce" style={{ animationDelay: '1s' }}>⭐</div>
+                <div className="absolute top-1/2 -right-4 text-xl animate-bounce" style={{ animationDelay: '1.5s' }}>💫</div>
+                
                 {/* Click me indicator */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-rounded font-semibold shadow-lg animate-pulse">
-                  Click the pocket!
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-6 py-3 rounded-full text-lg font-rounded font-bold shadow-lg animate-pulse border-2 border-accent/50">
+                  🪄 Click the magical pocket! 🪄
                 </div>
               </div>
 
-              {/* Toggle Content Button */}
+              {/* Magical Toggle Button */}
               <button
                 onClick={toggleContent}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-rounded font-semibold hover:bg-primary-glow transition-colors duration-300 shadow-lg z-10"
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 magic-button px-8 py-4 rounded-full font-rounded font-bold shadow-doraemon z-10 text-lg border-4 border-white/30 text-primary-foreground"
               >
-                {isContentVisible ? "Hide" : "Explore"}
+                {isContentVisible ? "🚪 Hide Magic" : "🌟 Discover Magic"}
               </button>
 
-              {/* Easter Egg */}
+              {/* Magical Easter Egg */}
               {showEasterEgg && (
-                <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-6 py-3 rounded-2xl text-center font-rounded font-semibold shadow-lg animate-bounce z-20">
-                  <div className="text-sm">Fun Fact!</div>
-                  <div className="text-xs mt-1">
+                <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 bg-gradient-doraemon text-primary-foreground px-8 py-4 rounded-3xl text-center font-rounded font-bold shadow-doraemon border-4 border-white/30 z-20 max-w-xs">
+                  <div className="text-lg flex items-center justify-center gap-2">
+                    ✨ Fun Fact! ✨
+                  </div>
+                  <div className="text-sm mt-2 leading-relaxed">
                     {funFacts[Math.floor(Math.random() * funFacts.length)]}
                   </div>
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-2xl animate-bounce">🎉</div>
                 </div>
               )}
             </div>

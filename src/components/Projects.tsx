@@ -69,21 +69,24 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-muted/30 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-48 h-48 bg-accent/5 rounded-full blur-2xl"></div>
+    <section id="projects" className="py-20 relative overflow-hidden z-10">
+      {/* Magical Background Decorations */}
+      <div className="absolute top-20 right-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl magical-hover"></div>
+      <div className="absolute bottom-20 left-20 w-72 h-72 bg-accent/20 rounded-full blur-2xl doraemon-float"></div>
+      <div className="absolute top-1/3 left-1/3 w-56 h-56 bg-red-accent/15 rounded-full blur-3xl magical-hover" style={{ animationDelay: '1s' }}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-doraemon font-bold text-foreground mb-4">
-            My Gadget Collection
+        {/* Magical Section Header */}
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-doraemon font-bold text-foreground mb-6 relative">
+            🛠️ My Gadget Collection 🛠️
+            <div className="absolute -top-6 -left-8 text-3xl animate-bounce" style={{ animationDelay: '0.5s' }}>🌟</div>
+            <div className="absolute -top-6 -right-8 text-3xl animate-bounce" style={{ animationDelay: '1s' }}>✨</div>
           </h2>
-          <p className="text-xl text-muted-foreground font-rounded flex items-center justify-center gap-2">
-            <Sparkles className="text-accent" size={24} />
-            Projects straight from Doraemon's pocket
-            <Sparkles className="text-accent" size={24} />
+          <p className="text-2xl text-muted-foreground font-rounded flex items-center justify-center gap-3">
+            <Sparkles className="text-accent animate-pulse" size={28} />
+            Projects straight from Doraemon's magical pocket
+            <Sparkles className="text-accent animate-pulse" size={28} />
           </p>
         </div>
 
@@ -96,14 +99,15 @@ const Projects = () => {
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
-              {/* Project Icon */}
-              <div className="text-6xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300">
+              {/* Magical Project Icon */}
+              <div className="text-8xl mb-6 text-center transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 relative">
                 {project.image}
+                <div className="absolute -top-2 -right-2 text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-bounce">✨</div>
               </div>
 
               {/* Project Content */}
               <div className="space-y-4">
-                <h3 className="text-xl font-doraemon font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-2xl font-doraemon font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                   {project.title}
                 </h3>
                 
@@ -132,22 +136,22 @@ const Projects = () => {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    className="border-2 border-primary/60 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 backdrop-blur-sm bg-white/20 font-rounded font-semibold"
                     asChild
                   >
                     <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github size={16} className="mr-2" />
-                      Code
+                      <Github size={18} className="mr-2" />
+                      🔧 Code
                     </a>
                   </Button>
                   <Button
                     size="sm"
-                    className="bg-gradient-doraemon hover:scale-105 transition-transform duration-300"
+                    className="magic-button font-rounded font-semibold border-2 border-white/30"
                     asChild
                   >
                     <a href={project.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink size={16} className="mr-2" />
-                      Live Demo
+                      <ExternalLink size={18} className="mr-2" />
+                      🚀 Live Demo
                     </a>
                   </Button>
                 </div>
@@ -159,19 +163,19 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-muted-foreground font-rounded mb-6">
-            Want to see more magical creations?
+        {/* Magical Call to Action */}
+        <div className="text-center mt-20">
+          <p className="text-2xl text-muted-foreground font-rounded mb-8 flex items-center justify-center gap-2">
+            🎪 Want to see more magical creations? 🎪
           </p>
           <Button
             size="lg"
-            className="bg-gradient-doraemon hover:scale-105 transition-transform duration-300 shadow-doraemon text-lg px-8 py-6 rounded-2xl font-rounded font-semibold"
+            className="magic-button text-xl px-12 py-8 rounded-3xl font-rounded font-bold shadow-doraemon border-4 border-white/30 text-primary-foreground"
             asChild
           >
             <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <Github size={20} className="mr-3" />
-              View All Projects on GitHub
+              <Github size={24} className="mr-4" />
+              🌟 Explore All Gadgets on GitHub 🌟
             </a>
           </Button>
         </div>
