@@ -2,41 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Doraemon Portfolio Design System - All colors, gradients, fonts, etc defined here. 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Doraemon Color Palette */
+    --background: 220 30% 97%;
+    --foreground: 220 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Doraemon Blue as Primary */
+    --primary: 210 100% 56%; /* #1E90FF */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Clean White Secondary */
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 220 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 92%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Yellow Bell Accent */
+    --accent: 51 100% 50%; /* #FFD700 */
+    --accent-foreground: 220 20% 15%;
+
+    /* Red Nose */
+    --red-accent: 0 71% 67%; /* #FF5C5C */
+    --red-accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 210 100% 56%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Doraemon Design Tokens */
+    --pocket-blue: 210 100% 56%;
+    --gadget-shadow: 210 50% 25%;
+    
+    /* Gradients */
+    --gradient-doraemon: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-pocket: linear-gradient(180deg, hsl(var(--primary)), hsl(210 100% 45%));
+    --gradient-sky: linear-gradient(180deg, hsl(200 100% 85%), hsl(220 30% 97%));
+    
+    /* Shadows */
+    --shadow-doraemon: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-gadget: 0 5px 20px -5px hsl(var(--gadget-shadow) / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.6);
+    
+    /* Animations */
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-float: transform 3s ease-in-out infinite;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +128,112 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-rounded;
   }
+}
+
+@layer components {
+  /* Doraemon Component Styles */
+  .doraemon-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .gadget-card {
+    @apply bg-card rounded-3xl p-6 shadow-lg border-2 border-primary/20;
+    background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    transition: var(--transition-bounce);
+  }
+  
+  .gadget-card:hover {
+    @apply scale-105 shadow-2xl border-primary/40;
+    box-shadow: var(--shadow-doraemon);
+  }
+  
+  .pocket-container {
+    @apply relative overflow-hidden rounded-full;
+    background: var(--gradient-pocket);
+  }
+  
+  .anywhere-door {
+    @apply relative overflow-hidden;
+    transition: var(--transition-smooth);
+  }
+  
+  .anywhere-door::before {
+    content: '';
+    @apply absolute inset-0 bg-primary opacity-0 transition-opacity duration-300;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary-glow)), transparent);
+    transform: translateX(-100%);
+  }
+  
+  .anywhere-door:hover::before {
+    @apply opacity-20;
+    animation: door-slide 0.6s ease-out;
+  }
+  
+  .bell-glow {
+    @apply relative;
+    animation: bell-ring 4s ease-in-out infinite;
+  }
+  
+  .bell-glow::after {
+    content: '';
+    @apply absolute inset-0 rounded-full opacity-0;
+    background: radial-gradient(circle, hsl(var(--accent) / 0.4), transparent);
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-doraemon {
+    background: var(--gradient-doraemon);
+  }
+  
+  .bg-gradient-pocket {
+    background: var(--gradient-pocket);
+  }
+  
+  .bg-gradient-sky {
+    background: var(--gradient-sky);
+  }
+  
+  .shadow-doraemon {
+    box-shadow: var(--shadow-doraemon);
+  }
+  
+  .shadow-gadget {
+    box-shadow: var(--shadow-gadget);
+  }
+  
+  .text-red-accent {
+    color: hsl(var(--red-accent));
+  }
+  
+  .bg-red-accent {
+    background-color: hsl(var(--red-accent));
+  }
+}
+
+/* Doraemon Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(0deg); }
+  75% { transform: translateY(-15px) rotate(-1deg); }
+}
+
+@keyframes door-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes bell-ring {
+  0%, 90%, 100% { transform: rotate(0deg); }
+  2%, 8% { transform: rotate(2deg); }
+  4%, 6% { transform: rotate(-2deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
 }
