@@ -1,5 +1,4 @@
 import { Heart, Mail, Github, Linkedin, Twitter } from "lucide-react";
-import doraemonWave from "@/assets/doraemon-wave.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,14 +48,12 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
-            {/* Doraemon Waving */}
+            {/* Doraemon Emoji Waving */}
             <div className="flex justify-center lg:justify-start">
               <div className="relative">
-                <img 
-                  src={doraemonWave} 
-                  alt="Doraemon Waving Goodbye" 
-                  className="w-64 h-64 object-contain doraemon-float"
-                />
+                <div className="text-9xl doraemon-float">
+                  👋
+                </div>
                 
                 {/* Speech bubble */}
                 <div className="absolute -top-8 -right-4 bg-white text-primary px-6 py-3 rounded-2xl shadow-lg">

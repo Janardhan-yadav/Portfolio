@@ -1,6 +1,5 @@
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import doraemonHero from "@/assets/doraemon-hero.png";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -18,14 +17,10 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="text-center">
-          {/* Doraemon Hero Image */}
+          {/* Animated Emoji Hero */}
           <div className="mb-8 flex justify-center">
-            <div className="doraemon-float">
-              <img 
-                src={doraemonHero} 
-                alt="Doraemon with Bamboo Copter" 
-                className="w-64 h-36 md:w-80 md:h-45 lg:w-96 lg:h-54 object-contain"
-              />
+            <div className="text-8xl md:text-9xl lg:text-[10rem] doraemon-float">
+              🚁
             </div>
           </div>
 

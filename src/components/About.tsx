@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Code, Palette, Rocket, Heart } from "lucide-react";
-import doraemonPocket from "@/assets/doraemon-pocket.png";
 
 const About = () => {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
@@ -48,14 +47,10 @@ const About = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div 
-                className="pocket-container w-80 h-80 cursor-pointer transition-transform duration-300 hover:scale-105"
+                className="pocket-container w-80 h-80 cursor-pointer transition-transform duration-300 hover:scale-105 flex items-center justify-center text-9xl"
                 onClick={handlePocketClick}
               >
-                <img 
-                  src={doraemonPocket} 
-                  alt="Doraemon's Magical Pocket" 
-                  className="w-full h-full object-cover rounded-full shadow-doraemon"
-                />
+                🎒
                 
                 {/* Click me indicator */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-rounded font-semibold shadow-lg animate-pulse">
