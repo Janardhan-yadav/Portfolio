@@ -29,13 +29,13 @@ const Hero = () => {
 
           {/* Hero Text */}
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-doraemon font-bold text-foreground">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-doraemon font-bold text-foreground drop-shadow-lg">
               Hi, I'm <span className="text-primary">Janardhan</span>
             </h1>
-            <div className="text-2xl md:text-3xl lg:text-4xl font-rounded font-medium text-muted-foreground">
+            <div className="text-2xl md:text-3xl lg:text-4xl font-rounded font-medium text-foreground drop-shadow-md">
               Developer <span className="text-3xl md:text-4xl lg:text-5xl">🚀</span>
             </div>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-rounded">
+            <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto font-rounded drop-shadow-sm bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-primary/20">
               Crafting magical digital experiences with code, just like Doraemon creates wonders with his gadgets!
             </p>
           </div>

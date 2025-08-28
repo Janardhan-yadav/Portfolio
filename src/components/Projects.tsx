@@ -78,12 +78,12 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Magical Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-doraemon font-bold text-foreground mb-6 relative">
+          <h2 className="text-5xl md:text-6xl font-doraemon font-bold text-foreground mb-6 relative drop-shadow-lg">
             🛠️ My Gadget Collection 🛠️
             <div className="absolute -top-6 -left-8 text-3xl animate-bounce" style={{ animationDelay: '0.5s' }}>🌟</div>
             <div className="absolute -top-6 -right-8 text-3xl animate-bounce" style={{ animationDelay: '1s' }}>✨</div>
           </h2>
-          <p className="text-2xl text-muted-foreground font-rounded flex items-center justify-center gap-3">
+          <p className="text-2xl text-foreground font-rounded flex items-center justify-center gap-3 bg-white/20 backdrop-blur-sm rounded-2xl p-4 border border-primary/20 inline-flex">
             <Sparkles className="text-accent animate-pulse" size={28} />
             Projects straight from Doraemon's magical pocket
             <Sparkles className="text-accent animate-pulse" size={28} />
@@ -107,11 +107,11 @@ const Projects = () => {
 
               {/* Project Content */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-doraemon font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-2xl font-doraemon font-bold text-foreground group-hover:text-primary transition-colors duration-300 drop-shadow-md">
                   {project.title}
                 </h3>
                 
-                <p className="text-muted-foreground font-rounded text-sm leading-relaxed">
+                <p className="text-foreground font-rounded text-sm leading-relaxed bg-white/60 backdrop-blur-sm rounded-lg p-3 border border-primary/10">
                   {project.description}
                 </p>
 
@@ -165,7 +165,7 @@ const Projects = () => {
 
         {/* Magical Call to Action */}
         <div className="text-center mt-20">
-          <p className="text-2xl text-muted-foreground font-rounded mb-8 flex items-center justify-center gap-2">
+          <p className="text-2xl text-foreground font-rounded mb-8 flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm rounded-2xl p-4 border border-primary/20 inline-flex">
             🎪 Want to see more magical creations? 🎪
           </p>
           <Button

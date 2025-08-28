@@ -35,11 +35,11 @@ const About = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-doraemon font-bold text-foreground mb-6 relative">
+          <h2 className="text-5xl md:text-6xl font-doraemon font-bold text-foreground mb-6 relative drop-shadow-lg">
             ✨ About Me ✨
             <div className="absolute -top-4 -right-8 text-3xl animate-bounce">🎈</div>
           </h2>
-          <p className="text-2xl text-muted-foreground font-rounded">
+          <p className="text-2xl text-foreground font-rounded drop-shadow-md bg-white/20 backdrop-blur-sm rounded-2xl p-4 border border-primary/20 inline-block">
             🎒 Stored in Doraemon's magical pocket of wonders 🎒
           </p>
         </div>
@@ -93,11 +93,11 @@ const About = () => {
             <div className="space-y-8">
               {/* Intro */}
               <div className="space-y-4">
-                <h3 className="text-2xl font-doraemon font-bold text-foreground flex items-center gap-3">
+                <h3 className="text-2xl font-doraemon font-bold text-foreground flex items-center gap-3 drop-shadow-md">
                   <Heart className="text-red-accent" size={28} />
                   Hello from the pocket!
                 </h3>
-                <p className="text-lg text-muted-foreground font-rounded leading-relaxed">
+                <p className="text-lg text-foreground font-rounded leading-relaxed bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
                   I'm a passionate developer who believes in creating magical digital experiences. 
                   Just like Doraemon helps Nobita solve problems with his amazing gadgets, 
                   I use code to solve real-world challenges and bring ideas to life.
@@ -106,7 +106,7 @@ const About = () => {
 
               {/* Skills Section */}
               <div className="space-y-4">
-                <h4 className="text-xl font-doraemon font-bold text-foreground flex items-center gap-3">
+                <h4 className="text-xl font-doraemon font-bold text-foreground flex items-center gap-3 drop-shadow-md">
                   <Code className="text-primary" size={24} />
                   My Gadgets (Skills)
                 </h4>
@@ -125,25 +125,25 @@ const About = () => {
 
               {/* Interests */}
               <div className="space-y-4">
-                <h4 className="text-xl font-doraemon font-bold text-foreground flex items-center gap-3">
+                <h4 className="text-xl font-doraemon font-bold text-foreground flex items-center gap-3 drop-shadow-md">
                   <Palette className="text-accent" size={24} />
                   What Drives Me
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3 p-4 bg-card rounded-2xl shadow-gadget">
+                  <div className="flex items-center space-x-3 p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-gadget border border-primary/20">
                     <Rocket className="text-primary" size={20} />
-                    <span className="font-rounded">Innovation & Technology</span>
+                    <span className="font-rounded text-foreground font-semibold">Innovation & Technology</span>
                   </div>
-                  <div className="flex items-center space-x-3 p-4 bg-card rounded-2xl shadow-gadget">
+                  <div className="flex items-center space-x-3 p-4 bg-white/90 backdrop-blur-sm rounded-2xl shadow-gadget border border-primary/20">
                     <Palette className="text-accent" size={20} />
-                    <span className="font-rounded">Beautiful UI/UX</span>
+                    <span className="font-rounded text-foreground font-semibold">Beautiful UI/UX</span>
                   </div>
                 </div>
               </div>
 
               {/* CTA */}
               <div className="pt-4">
-                <p className="text-muted-foreground font-rounded italic">
+                <p className="text-foreground font-rounded italic bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
                   "The best way to predict the future is to create it!" - Just like Doraemon's time machine! ⏰
                 </p>
               </div>

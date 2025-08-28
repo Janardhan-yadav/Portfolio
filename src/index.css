@@ -8,15 +8,15 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Doraemon Color Palette */
+    /* Doraemon Color Palette - Enhanced for visibility */
     --background: 220 30% 97%;
-    --foreground: 220 20% 15%;
+    --foreground: 220 90% 5%; /* Much darker for better contrast */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 220 90% 5%; /* Much darker */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 220 90% 5%; /* Much darker */
 
     /* Doraemon Blue as Primary */
     --primary: 210 100% 56%; /* #1E90FF */
@@ -25,14 +25,14 @@ All colors MUST be HSL.
 
     /* Clean White Secondary */
     --secondary: 0 0% 98%;
-    --secondary-foreground: 220 20% 15%;
+    --secondary-foreground: 220 90% 5%; /* Much darker */
 
     --muted: 220 15% 92%;
-    --muted-foreground: 220 10% 50%;
+    --muted-foreground: 220 60% 25%; /* Much darker for better visibility */
 
     /* Yellow Bell Accent */
     --accent: 51 100% 50%; /* #FFD700 */
-    --accent-foreground: 220 20% 15%;
+    --accent-foreground: 220 90% 5%; /* Much darker */
 
     /* Red Nose */
     --red-accent: 0 71% 67%; /* #FF5C5C */
@@ -152,10 +152,10 @@ All colors MUST be HSL.
     height: 100%;
     background: linear-gradient(
       135deg,
-      rgba(30, 144, 255, 0.1) 0%,
-      rgba(255, 255, 255, 0.8) 30%,
-      rgba(255, 215, 0, 0.1) 60%,
-      rgba(255, 255, 255, 0.8) 100%
+      rgba(30, 144, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.6) 30%,
+      rgba(255, 215, 0, 0.05) 60%,
+      rgba(255, 255, 255, 0.7) 100%
     );
     z-index: -1;
     pointer-events: none;
