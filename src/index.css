@@ -423,4 +423,3 @@ All colors MUST be HSL.
   0%, 100% { box-shadow: 0 0 50px rgba(30, 144, 255, 0.4), inset 0 0 50px rgba(255, 255, 255, 0.2); }
   50% { box-shadow: 0 0 80px rgba(30, 144, 255, 0.6), inset 0 0 80px rgba(255, 255, 255, 0.4); }
 }
-}
