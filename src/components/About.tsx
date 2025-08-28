@@ -4,6 +4,7 @@ import { Code, Palette, Rocket, Heart } from "lucide-react";
 const About = () => {
   const [showEasterEgg, setShowEasterEgg] = useState(false);
   const [isContentVisible, setIsContentVisible] = useState(false);
+  const [showSkills, setShowSkills] = useState(false);
 
   const skills = [
     "JavaScript", "TypeScript", "React", "Next.js", "Node.js", 
@@ -49,19 +50,55 @@ const About = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <div 
-                className="pocket-magic w-96 h-96 cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-3 flex items-center justify-center text-[8rem] shadow-doraemon"
+                className="pocket-magic w-96 h-96 cursor-pointer transition-all duration-500 hover:scale-110 hover:rotate-3 flex items-center justify-center text-[8rem] shadow-doraemon relative"
                 onClick={handlePocketClick}
+                onMouseEnter={() => setShowSkills(true)}
+                onMouseLeave={() => setShowSkills(false)}
               >
                 🎒
+                
+                {/* Skills floating out of pocket on hover */}
+                {showSkills && (
+                  <div className="absolute inset-0 pointer-events-none">
+                    {skills.map((skill, index) => {
+                      const positions = [
+                        { top: '-60px', left: '50px', delay: '0s' },
+                        { top: '-40px', right: '30px', delay: '0.1s' },
+                        { top: '20px', right: '-50px', delay: '0.2s' },
+                        { bottom: '40px', right: '-40px', delay: '0.3s' },
+                        { bottom: '-40px', left: '40px', delay: '0.4s' },
+                        { bottom: '20px', left: '-60px', delay: '0.5s' },
+                        { top: '60px', left: '-50px', delay: '0.6s' },
+                        { top: '10px', left: '10px', delay: '0.7s' },
+                        { top: '100px', right: '10px', delay: '0.8s' }
+                      ];
+                      const pos = positions[index % positions.length];
+                      
+                      return (
+                        <div
+                          key={skill}
+                          className="absolute bg-gradient-doraemon text-primary-foreground px-3 py-2 rounded-full text-sm font-rounded font-semibold shadow-doraemon border-2 border-white/50 animate-fade-in z-30"
+                          style={{
+                            ...pos,
+                            animationDelay: pos.delay,
+                            transform: 'translateZ(0)'
+                          }}
+                        >
+                          ✨ {skill}
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
                 
                 {/* Magical sparkles */}
                 <div className="absolute top-8 right-8 text-2xl animate-bounce" style={{ animationDelay: '0.5s' }}>✨</div>
                 <div className="absolute bottom-8 left-8 text-2xl animate-bounce" style={{ animationDelay: '1s' }}>⭐</div>
                 <div className="absolute top-1/2 -right-4 text-xl animate-bounce" style={{ animationDelay: '1.5s' }}>💫</div>
                 
-                {/* Click me indicator */}
+                {/* Hover/Click me indicator */}
                 <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-6 py-3 rounded-full text-lg font-rounded font-bold shadow-lg animate-pulse border-2 border-accent/50">
-                  🪄 Click the magical pocket! 🪄
+                  {showSkills ? "🎒 Skills are floating out!" : "🪄 Hover for skills, click for fun!"}
                 </div>
               </div>
 
