@@ -45,9 +45,9 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="magic-button text-lg px-10 py-8 rounded-3xl font-rounded font-bold shadow-doraemon border-4 border-primary/30 text-primary-foreground"
-              onClick={() => scrollToSection("projects")}
+              onClick={() => scrollToSection("experience")}
             >
-              ✨ Explore My Gadgets ✨
+              ✨ Explore My Journey ✨
             </Button>
             <Button 
               variant="outline" 
