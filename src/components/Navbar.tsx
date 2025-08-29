@@ -27,7 +27,7 @@ const Navbar = () => {
               />
             </div>
             <span className="text-xl font-doraemon font-bold text-primary">
-              Developer Portfolio
+              Janardhan's Portfolio
             </span>
           </div>
 

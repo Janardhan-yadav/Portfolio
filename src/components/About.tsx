@@ -7,8 +7,9 @@ const About = () => {
   const [showSkills, setShowSkills] = useState(false);
 
   const skills = [
-    "JavaScript", "TypeScript", "React", "Next.js", "Node.js", 
-    "Python", "UI/UX Design", "Tailwind CSS", "Git"
+    "Java","JavaScript",  "React", "Next.js", "Node.js", 
+    "Python", "UI/UX Design", "Tailwind CSS", "Git", "DSA", "OOP",
+     "SQL","Operating Systems","BERT","YOLO","NLP","Computer Vision","Flutter","Firebase"
   ];
 
   const funFacts = [

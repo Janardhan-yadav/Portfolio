@@ -7,65 +7,15 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
-      title: "Anywhere Door Portal",
-      description: "A React-based web application that connects different worlds through seamless navigation. Built with TypeScript and modern animations.",
-      tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      image: "🚪",
-      github: "https://github.com",
-      live: "https://example.com",
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
-      id: 2,
-      title: "Time Machine Dashboard",
-      description: "A comprehensive analytics dashboard that helps you travel through your data across different time periods with beautiful visualizations.",
-      tech: ["Next.js", "Chart.js", "PostgreSQL", "Prisma"],
-      image: "⏰",
-      github: "https://github.com",
-      live: "https://example.com",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      id: 3,
-      title: "Bamboo Copter Chat",
-      description: "Real-time messaging application with flying message animations. Features group chats, emoji reactions, and voice messages.",
-      tech: ["Socket.io", "Node.js", "MongoDB", "React"],
-      image: "🚁",
-      github: "https://github.com",
-      live: "https://example.com",
-      gradient: "from-green-500 to-emerald-500"
-    },
-    {
-      id: 4,
-      title: "Memory Bread E-Learning",
-      description: "An interactive learning platform that helps students absorb knowledge efficiently with spaced repetition and gamification.",
-      tech: ["Vue.js", "Firebase", "Tailwind CSS", "PWA"],
-      image: "🍞",
-      github: "https://github.com",
-      live: "https://example.com",
-      gradient: "from-orange-500 to-amber-500"
-    },
-    {
-      id: 5,
-      title: "Big Light AI Assistant",
-      description: "An intelligent chatbot powered by modern AI that illuminates solutions to complex problems with natural language processing.",
-      tech: ["Python", "OpenAI API", "FastAPI", "Redis"],
-      image: "💡",
-      github: "https://github.com",
-      live: "https://example.com",
-      gradient: "from-yellow-500 to-orange-500"
-    },
-    {
-      id: 6,
-      title: "Small Light Portfolio",
-      description: "A minimalist portfolio generator that creates beautiful, responsive portfolios for developers and designers in minutes.",
-      tech: ["Gatsby", "GraphQL", "Netlify CMS", "GSAP"],
-      image: "🔦",
-      github: "https://github.com",
-      live: "https://example.com",
-      gradient: "from-indigo-500 to-blue-500"
-    }
+  id: 1,
+  title: "DocVerify – Document Verification System",
+  description: "A Flutter and FastAPI-based mobile app for verifying admission documents using OCR and BERT-based validation with real-time results.",
+  tech: ["Flutter", "FastAPI", "EasyOCR", "BERT", "Firebase"],
+  image: "📄",
+  github: "https://github.com/Janardhan-yadav/Docverify",
+  live: "https://drive.google.com/file/d/1h8Yh6OBySr_EhXgBkM49h1m149JpXGo5/view?usp=drive_link",
+  gradient: "from-blue-500 to-indigo-500"
+}
   ];
 
   return (
@@ -149,10 +99,7 @@ const Projects = () => {
                     className="magic-button font-rounded font-semibold border-2 border-white/30"
                     asChild
                   >
-                    <a href={project.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink size={18} className="mr-2" />
-                      🚀 Live Demo
-                    </a>
+                    {/* Live Demo removed */}
                   </Button>
                 </div>
               </div>
@@ -173,7 +120,7 @@ const Projects = () => {
             className="magic-button text-xl px-12 py-8 rounded-3xl font-rounded font-bold shadow-doraemon border-4 border-white/30 text-primary-foreground"
             asChild
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Janardhan-yadav" target="_blank" rel="noopener noreferrer">
               <Github size={24} className="mr-4" />
               🌟 Explore All Gadgets on GitHub 🌟
             </a>

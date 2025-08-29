@@ -220,7 +220,7 @@ All colors MUST be HSL.
   }
   
   .magical-hover {
-    animation: magical-bounce 8s ease-in-out infinite;
+    animation: magical-bounce 20s ease-in-out infinite;
   }
   
   .gadget-card {
@@ -268,7 +268,7 @@ All colors MUST be HSL.
     box-shadow: 
       0 0 50px rgba(30, 144, 255, 0.4),
       inset 0 0 50px rgba(255, 255, 255, 0.2);
-    animation: pocket-glow 3s ease-in-out infinite;
+    animation: pocket-glow 3s ease-in-out ;
   }
   
   .anywhere-door {
@@ -340,8 +340,7 @@ All colors MUST be HSL.
   }
 
   .magic-button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(30, 144, 255, 0.4);
+    /* No movement or extra shadow on hover */
   }
 }
 

@@ -1,4 +1,4 @@
-import { Heart, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Heart, Mail, Github, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,28 +7,21 @@ const Footer = () => {
     {
       name: "GitHub",
       icon: Github,
-      href: "https://github.com",
+      href: "https://github.com/Janardhan-yadav",
       color: "hover:text-primary",
       gadget: "🔧" // Repair Tool
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/janardhan-yadav-tokala/",
       color: "hover:text-blue-600",
       gadget: "📱" // Communication Device
     },
     {
-      name: "Twitter",
-      icon: Twitter,
-      href: "https://twitter.com",
-      color: "hover:text-blue-400",
-      gadget: "📡" // Broadcasting Antenna
-    },
-    {
       name: "Email",
       icon: Mail,
-      href: "mailto:janardhan@example.com",
+      href: "mailto:yadavjanardhan91@gail.com",
       color: "hover:text-accent",
       gadget: "✉️" // Letter
     }

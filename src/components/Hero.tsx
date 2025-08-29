@@ -28,9 +28,9 @@ const Hero = () => {
           </div>
 
           {/* Hero Text */}
-          <div className="space-y-6">
+          <div className="text-lg md:text-xl text-foreground max-w-2xl mx-auto font-rounded drop-shadow-sm bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-primary/20">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-doraemon font-bold text-foreground drop-shadow-lg">
-              Hi, I'm <span className="text-primary">Janardhan</span>
+              Hi, I'm <span className="text-4xl md:text-6xl lg:text-7xl font-doraemon font-bold text-foreground drop-shadow-lg">Janardhan</span>
             </h1>
             <div className="text-2xl md:text-3xl lg:text-4xl font-rounded font-medium text-foreground drop-shadow-md">
               Developer <span className="text-3xl md:text-4xl lg:text-5xl">🚀</span>
@@ -62,7 +62,7 @@ const Hero = () => {
           {/* Magical Social Gadgets */}
           <div className="mt-12 flex justify-center space-x-8">
             <a 
-              href="https://github.com" 
+              href="https://github.com/Janardhan-yadav" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-4 rounded-full bg-white/20 backdrop-blur-md border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-500 shadow-gadget hover:shadow-doraemon hover:scale-125 hover:rotate-12"
@@ -70,7 +70,7 @@ const Hero = () => {
               <Github size={28} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/janardhan-yadav-tokala/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-4 rounded-full bg-white/20 backdrop-blur-md border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-500 shadow-gadget hover:shadow-doraemon hover:scale-125 hover:rotate-12"
@@ -78,7 +78,7 @@ const Hero = () => {
               <Linkedin size={28} />
             </a>
             <a 
-              href="mailto:janardhan@example.com"
+              href="mailto:yadavjanardhan91@gmail.com"
               className="p-4 rounded-full bg-white/20 backdrop-blur-md border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground transition-all duration-500 shadow-gadget hover:shadow-doraemon hover:scale-125 hover:rotate-12"
             >
               <Mail size={28} />
